@@ -18,6 +18,8 @@ class CountryDetails {
   /// IT : Italia
   /// DE : Deutschland
   final String? name;
+  final String? name_en;
+  final String? name_gr;
 
   /// Extended country name based on a region language
   ///
@@ -30,6 +32,8 @@ class CountryDetails {
   CountryDetails.fromMap(Map<String, dynamic> data,
       [String? localizedCountryName])
       : this.name = data['name'],
+        this.name_en = data['name_en'],
+        this.name_gr = data['name_gr'],
         this.alpha2Code = data['alpha2Code'],
         this.alpha3Code = data['alpha3Code'],
         this.dialCode = data['dial_code'],
